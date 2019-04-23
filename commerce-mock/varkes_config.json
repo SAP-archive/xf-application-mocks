@@ -1,0 +1,59 @@
+{
+    "name": "SAP Commerce Cloud Mock",
+    "logo": "logo.svg",
+    "events": [
+        {
+            "specification": "apis/events.yaml",
+            "name": "SAP Commerce Cloud - Events",
+            "description": "Set of events emitted typically by SAP Commerce Cloud",
+            "provider": "SAP"
+        }
+    ],
+    "apis": [
+        {
+            "name": "SAP Commerce Cloud - Commerce Webservices",
+            "description": "These services manage all of the common commerce functionality, and also include customizations from installed AddOns.",
+            "basepath": "/rest/v2",
+            "specification": "apis/commercewebservices.yaml",
+            "provider": "SAP",
+            "type": "openapi",
+            "auth": "oauth"
+        },
+        {
+            "name": "SAP Commerce Cloud - Assisted Service Webservices",
+            "description": "These services provide the ability for agents to assist customers with their order, and look up the order by name, email, cart, or order number.",
+            "basepath": "/assistedservicewebservices",
+            "specification": "apis/assistedservicewebservices.yaml",
+            "provider": "SAP",
+            "type": "openapi",
+            "auth": "oauth"
+        },
+        {
+            "name": "SAP Commerce Cloud - Order Management Webservices",
+            "description": "These services manage order cancellations, returns, fraud, and payment transactions.",
+            "basepath": "/ordermanagementwebservices",
+            "specification": "apis/ordermanagementwebservices.yaml",
+            "provider": "SAP",
+            "type": "openapi",
+            "auth": "oauth"
+        },
+        {
+            "name": "SAP Commerce Cloud - Coupon Webservices",
+            "description": "These services generate or administer coupons.",
+            "basepath": "/couponwebservices",
+            "specification": "apis/couponwebservices.yaml",
+            "provider": "SAP",
+            "type": "openapi",
+            "auth": "oauth"
+        },
+        {
+            "name": "SAP Commerce Cloud - Warehousing Webservices",
+            "description": "These services manage consignments, stock levels, and points of service.",
+            "basepath": "/warehousingwebservices",
+            "specification": "apis/warehousingwebservices.yaml",
+            "provider": "SAP",
+            "type": "openapi",
+            "auth": "oauth"
+        }
+    ]
+}

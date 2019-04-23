@@ -1,0 +1,14 @@
+{
+    "name": "XF Mock",
+    "apis": [
+        {
+            "name": "XF API",
+            "basepath": "/v1",
+            "metadata":"/api",
+            "specification": "apis/api.yaml",
+            "provider": "SAP",
+            "type":"openapi",
+            "auth": "none"
+        }
+    ]
+}

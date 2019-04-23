@@ -1,0 +1,26 @@
+{
+  "name": "commerce-mock",
+  "description": "mocking SAP commerce application",
+  "version": "0.1.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node . 10000"
+  },
+  "dependencies": {
+    "@varkes/app-connector-client": "0.5.0",
+    "@varkes/cockpit": "0.5.0",
+    "@varkes/openapi-mock": "0.5.0",
+    "express": "^4.16.4",
+    "npm-check-updates": "^3.1.8"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4",
+    "supertest": "^4.0.2"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SAP/xf-application-mocks"
+  }
+}

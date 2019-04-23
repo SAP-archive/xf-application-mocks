@@ -1,0 +1,38 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: commerce-mock
+  labels:
+    app: commerce-mock
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: commerce-mock
+      annotations:
+        sidecar.istio.io/inject: "true"
+    spec:
+      containers:
+      - image: eu.gcr.io/kyma-project/xf-application-mocks/commerce-mock:latest
+        imagePullPolicy: Always
+        name: commerce-mock
+        ports:
+        - name: http
+          containerPort: 10000
+        env:
+        - name: DEBUG
+          value: "true"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: commerce-mock
+  labels:
+    app: commerce-mock
+spec:
+  ports:
+  - name: http
+    port: 10000
+  selector:
+    app: commerce-mock

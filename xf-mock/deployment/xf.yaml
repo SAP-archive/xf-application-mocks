@@ -1,0 +1,50 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: xf-mock
+  labels:
+    app: xf-mock
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: xf-mock
+      annotations:
+        sidecar.istio.io/inject: "true"
+    spec:
+      containers:
+      - image: eu.gcr.io/kyma-project/xf-mock:latest
+        imagePullPolicy: Always
+        name: xf-mock
+        ports:
+        - name: http
+          containerPort: 10000
+        env:
+        - name: DEBUG
+          value: "true"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: xf-mock
+  labels:
+    app: xf-mock
+spec:
+  ports:
+  - name: http
+    port: 10000
+  selector:
+    app: xf-mock
+---
+apiVersion: gateway.kyma-project.io/v1alpha2
+kind: Api
+metadata:
+  labels:
+    app: xf-mock
+  name: xf-mock
+spec:
+  hostname: xf
+  service:
+    name: xf-mock
+    port: 10000

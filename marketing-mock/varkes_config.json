@@ -1,0 +1,69 @@
+{
+    "name": "SAP Marketing Cloud Mock",
+    "logo": "logo.svg",
+    "events": [
+        {
+            "specification": "apis/events.json",
+            "name": "SAP Marketing Cloud - Events",
+            "description": "Set of events emitted typically by SAP Marketing Cloud",
+            "provider": "SAP"
+        }
+    ],
+    "apis": [
+        {
+            "name": "SAP Marketing Cloud - Campaigns",
+            "description": "Marketing Campaigns API - This service enables external applications to access Campaign information from SAP Marketing Cloud.",
+            "specification": "apis/API_MKT_CAMPAIGN_SRV.xml",
+            "basepath":"/sap/opu/odata/sap/API_MKT_CAMPAIGN_SRV",
+            "provider": "SAP",
+            "type": "odata",
+            "auth": "basic",
+            "csrf": true,
+            "registerBasepath": false
+        },
+        {
+            "name": "SAP Marketing Cloud - Contact",
+            "description": "Marketing Contact API - This API service should be used for reading and writing master data about natural persons only",
+            "specification": "apis/API_MKT_CONTACT_SRV.xml",
+            "basepath":"/sap/opu/odata/sap/API_MKT_CONTACT_SRV",
+            "provider": "SAP",
+            "type": "odata",
+            "auth": "basic",
+            "csrf": true,
+            "registerBasepath": false
+        },
+        {
+            "name": "SAP Marketing Cloud - Export Definition",
+            "description": "Marketing Export Definition API - Read Content of Export Files in Campaigns - This service can be consumed by external applications to read the file name and content of an export file created during campaign execution.",
+            "specification": "apis/API_MKT_EXPORT_DEFINITION_SRV.xml",
+            "basepath":"/sap/opu/odata/sap/API_MKT_EXPORT_DEFINITION_SRV",
+            "provider": "SAP",
+            "type": "odata",
+            "auth": "basic",
+            "csrf": true,
+            "registerBasepath": false
+        },
+        {
+            "name": "SAP Marketing Cloud - Interactions",
+            "description": "Marketing Interactions API - This service enables external applications to access Interaction information from SAP Hybris Marketing Cloud.",
+            "specification": "apis/API_MKT_INTERACTION_SRV.xml",
+            "basepath":"/sap/opu/odata/sap/API_MKT_INTERACTION_SRV",
+            "provider": "SAP",
+            "type": "odata",
+            "auth": "basic",
+            "csrf": true,
+            "registerBasepath": false
+        },
+        {
+            "name": "SAP Marketing Cloud - Interaction Contacts",
+            "description": "Marketing Interaction Contacts API - to read and write Cookie IDs or reading ‘unknowns’, these are entities which can’t be classified as natural or legal person",
+            "specification": "apis/API_MKT_INTERACTION_CONTACT_SRV.xml",
+            "basepath":"/sap/opu/odata/sap/API_MKT_INTERACTION_CONTACT_SRV",
+            "provider": "SAP",
+            "type": "odata",
+            "auth": "basic",
+            "csrf": true,
+            "registerBasepath": false
+        }
+    ]
+}
