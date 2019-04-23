@@ -3,14 +3,14 @@
 Contains lightweight substitutes for SAP applications to ease the development and testing of extension and integration scenarios based on [Varkes](https://github.com/kyma-incubator/varkes). In conjunction with SAP Cloud Platform Extension Factory (XF), the efficient implementation of application extensions is supported without the need for real SAP applications being accessible during development.
 
 ## Description
-The SAP CP Extension Factory is designed to easily extend and mesh up different SAP applications and thirdparty APIs. To demo SAP CP Extension Factory functionality you usually require a dummy application to integrate with, not requiring a full-blown application setup.
+The SAP CP Extension Factory is designed to easily extend and mash up different SAP applications and third-party APIs. To demo SAP CP Extension Factory functionality, a dummy application is required for integration rather than requiring a full-blown application setup.
 
-A mockof an application allow you to save installation time, maintenance effort, and resources.
+A "mock" application allows you to save installation time, maintenance effort, and resources.
 A smart and lightweight mock of the application with a friendly user interface allows you to:
 - Successfully simulate requests or Events sent from the system to SAP CP Extension Factory as well as the responses from the SAP CP Extension Factory to the application.
 - Testing functionality in the SAP CP Extension Factory or on top of the SAP CP Extension Factory without worrying about the dependencies.
 
-The application mocks provided in this repository are providing dummy implementations for most of the SAP CX applications. They are not bound to SAP CP Extension Factory scenarios and can be operated standalone. All mocks are build in an API-driven approach and are based on [Varkes](https://github.com/kyma-incubator/varkes).
+The application mocks provided in this repository provide dummy implementations for most of the SAP CX applications. They are not bound to SAP CP Extension Factory scenarios and can be operated standalone. All mocks are built in an API-driven approach and are based on [Varkes](https://github.com/kyma-incubator/varkes).
 
 ## Installation
 All application mocks are providing detailed installation instructions on its own, please refer to the related README file.
