@@ -24,8 +24,15 @@ Application mock for SAP Marketing Cloud, see [marketing-mock](marketing-mock/RE
 ### SAP Cloud for Customer Mock
 Application mock for SAP Cloud for Customer, see [c4c-mock](c4c-mock/README.md).
 
+## Requirements
+The application mocks are NodeJS projects based on [Varkes](https://github.com/kyma-incubator/varkes) libraries and [Express](https://www.npmjs.com/package/express).
+To run them you require a Docker based container infrastructure, like pure Docker, Kubernetes or SAP CP Extension Factory. See the individual READMEs for detailed installation instructions.
+
+## Known Issues
+The application mocks based on the `@varkes/odata-mock` (currently marketing and c4c) are not supporting any relations between the model definitions provided in the releated EDMX files. A solution supporting the full EDMX specification will be provided soon.
+
 ## How to obtain support
-In case you find a bug or have ideas please open a [Github Issue](https://github.com/SAP/xf-application-mocks/issues).
+In case you find a bug or have ideas please open a [Github Issue](https://github.com/SAP/xf-application-mocks/issues). Feel free to contribute by creating a Pull Request.
 
 ## License
 Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
