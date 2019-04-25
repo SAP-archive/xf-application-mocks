@@ -1,307 +1,232 @@
 {
-    "asyncapi": "1.0.0",
-    "info": {
-      "title": "SAP Marketing events",
-      "version": "v1",
-      "description": "All events of SAP Marketing"
-    },
-    "baseTopic": "CCL",
-    "topics": {
-      "BO.Interaction.Created.v1": {
-        "x-sapobjecttype": "Interaction",
-        "subscribe": {
-          "x-payload": "Cloud Events",
-          "summary": "Interaction created",
-          "$ref": "#/components/messages/CloudEventContext_EXT_BO_Interaction_Created"
-        }
+  "asyncapi": "1.0.0",
+  "info": {
+      "title": "SAP Marketing Cloud Business Events",
+      "version": "1.0.0",
+      "description": "SAP Marketing Cloud Business Events"
+  },
+  "topics": {
+      "bo.marketingcoupon.changed.v1": {
+          "subscribe": {
+              "summary": "Marketing Coupon Changed",
+              "payload": {
+                  "type": "object",
+                  "properties": {
+                      "BO.MarketingCoupon.Changed.v1": {
+                          "type": "object",
+                          "required": [
+                              "KEY"
+                          ],
+                          "example": {
+                              "KEY": [
+                                  {
+                                      "COUPON": "4caad296-e0c5-491e-98ac-0ed118f9474e"
+                                  }
+                              ],
+                              "COUPONCODEUUID": "4caad296-e0c5-491e-98ac-0ed118f9474e"
+                          },
+                          "properties": {
+                              "KEY": {
+                                  "title": "Key Attributes",
+                                  "description": "Key Attributes",
+                                  "type": "array"
+                              },
+                              "COUPONCODEUUID": {
+                                  "title": "COUPONCODEUUID",
+                                  "description": "Coupon Code UUID",
+                                  "type": "string"
+                              }
+                          }
+                      }
+                  }
+              }
+          }
       },
-      "BO.MarketingCampaign.Completed.v1": {
-        "x-sapobjecttype": "MarketingCampaign",
-        "subscribe": {
-          "x-payload": "Cloud Events",
-          "summary": "Marketing Campaign completed",
-          "$ref": "#/components/messages/CloudEventContext_EXT_BO_MarketingCampaign_Completed"
-        }
+      "bo.marketingpermission.changed.v1": {
+          "subscribe": {
+              "summary": "Marketing Permission Changed",
+              "payload": {
+                  "type": "object",
+                  "properties": {
+                      "BO.MarketingPermission.Changed.v1": {
+                          "type": "object",
+                          "required": [
+                              "KEY"
+                          ],
+                          "example": {
+                              "KEY": [
+                                  {
+                                      "MARKETINGPERMISSIONUUID": "4caad296-e0c5-491e-98ac-0ed118f9474e"
+                                  }
+                              ],
+                              "CONTACTPERMISSION": "Y"
+                          },
+                          "properties": {
+                              "KEY": {
+                                  "title": "Key Attributes",
+                                  "description": "Key Attributes",
+                                  "type": "array"
+                              },
+                              "CONTACTPERMISSION": {
+                                  "title": "CONTACTPERMISSION",
+                                  "description": "Contact Permission",
+                                  "type": "string"
+                              }
+                          }
+                      }
+                  }
+              }
+          }
       },
-      "BO.MarketingCoupon.Changed.v1": {
-        "x-sapobjecttype": "MarketingCoupon",
-        "subscribe": {
-          "x-payload": "Cloud Events",
-          "summary": "Marketing Coupon Code Usage changed",
-          "$ref": "#/components/messages/CloudEventContext_EXT_BO_MarketingCoupon_Changed"
-        }
+      "bo.marketingpermission.created.v1": {
+          "subscribe": {
+              "summary": "Marketing Permission Created",
+              "payload": {
+                  "type": "object",
+                  "properties": {
+                      "BO.MarketingPermission.Created.v1": {
+                          "type": "object",
+                          "required": [
+                              "KEY"
+                          ],
+                          "example": {
+                              "KEY": [
+                                  {
+                                      "MARKETINGPERMISSIONUUID": "4caad296-e0c5-491e-98ac-0ed118f9474e"
+                                  }
+                              ],
+                              "CONTACTPERMISSION": "Y"
+                          },
+                          "properties": {
+                              "KEY": {
+                                  "title": "Key Attributes",
+                                  "description": "Key Attributes",
+                                  "type": "array"
+                              },
+                              "CONTACTPERMISSION": {
+                                  "title": "CONTACTPERMISSION",
+                                  "description": "Contact Permission",
+                                  "type": "string"
+                              }
+                          }
+                      }
+                  }
+              }
+          }
       },
-      "BO.MarketingPermission.Changed.v1": {
-        "x-sapobjecttype": "MarketingPermission",
-        "subscribe": {
-          "x-payload": "Cloud Events",
-          "summary": "Marketing Permission changed",
-          "$ref": "#/components/messages/CloudEventContext_EXT_BO_MarketingPermission_Changed"
-        }
+      "bo.interaction.created.v1": {
+          "subscribe": {
+              "summary": "Interaction Created",
+              "payload": {
+                  "type": "object",
+                  "properties": {
+                      "BO.Interaction.Created.v1": {
+                          "type": "object",
+                          "required": [
+                              "KEY"
+                          ],
+                          "example": {
+                              "KEY": [
+                                  {
+                                      "INTERACTION": "4caad296-e0c5-491e-98ac-0ed118f9474e"
+                                  }
+                              ],
+                              "INTERACTIIONTYPE": "EMAIL_COMPAINT"
+                          },
+                          "properties": {
+                              "KEY": {
+                                  "title": "Key Attributes",
+                                  "description": "Key Attributes",
+                                  "type": "array"
+                              },
+                              "INTERNATIONTYPE": {
+                                  "title": "INTERNATIONTYPE",
+                                  "description": "Interaction Type",
+                                  "type": "string"
+                              }
+                          }
+                      }
+                  }
+              }
+          }
       },
-      "BO.MarketingPermission.Created.v1": {
-        "x-sapobjecttype": "MarketingPermission",
-        "subscribe": {
-          "x-payload": "Cloud Events",
-          "summary": "Marketing Permission created",
-          "$ref": "#/components/messages/CloudEventContext_EXT_BO_MarketingPermission_Created"
-        }
+      "bo.marketingobjectattachment.created.v1": {
+          "subscribe": {
+              "summary": "Marketing Object Attachement Created",
+              "payload": {
+                  "type": "object",
+                  "properties": {
+                      "BO.MarketingObjectAttachment.Created.v1": {
+                          "type": "object",
+                          "required": [
+                              "KEY"
+                          ],
+                          "example": {
+                              "KEY": [
+                                  {
+                                      "MARKETINGOBJECTUUID": "4caad296-e0c5-491e-98ac-0ed118f9474e"
+                                  }
+                              ],
+                              "MARKETINGOBJECT": "00000400002",
+                              "MARKETINGOBJECTTYPE": "CUAN_INITIATIVE",
+                              "MKTGOBJECTATTACHMENTFILENAME": "CC2352CPG-0000040002-1-1-foo-20181212202020"
+                          },
+                          "properties": {
+                              "KEY": {
+                                  "title": "Key Attributes",
+                                  "description": "Key Attributes",
+                                  "type": "array"
+                              },
+                              "MARKETINGOBJECT": {
+                                  "title": "MARKETINGOBJECT",
+                                  "description": "ID of the Marketing Object",
+                                  "type": "string"
+                              },
+                              "MARKETINGOBJECTTYPE": {
+                                  "title": "MARKETINGOBJECTTYPE",
+                                  "description": "Type of the Marketing Object",
+                                  "type": "string"
+                              },
+                              "MKTGOBJECTATTACHMENTFILENAME": {
+                                  "title": "MKTGOBJECTATTACHMENTFILENAME",
+                                  "description": "Filename of the Object Attachment",
+                                  "type": "string"
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      },
+      "bo.marketingcampaign.completed.v1": {
+          "subscribe": {
+              "summary": "Marketing Campaign Completed",
+              "payload": {
+                  "type": "object",
+                  "properties": {
+                      "BO.MarketingCampaign.Completed.v1": {
+                          "type": "object",
+                          "required": [
+                              "KEY"
+                          ],
+                          "example": {
+                              "KEY": [
+                                  {
+                                      "CAMPAIGN": "4caad296-e0c5-491e-98ac-0ed118f9474e"
+                                  }
+                              ]
+                          },
+                          "properties": {
+                              "KEY": {
+                                  "title": "Key Attributes",
+                                  "description": "Key Attributes",
+                                  "type": "array"
+                              }
+                          }
+                      }
+                  }
+              }
+          }
       }
-    },
-    "components": {
-      "messages": {
-        "CloudEventContext_EXT_BO_Interaction_Created": {
-          "summary": "Interaction created",
-          "payload": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CloudEventContext"
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "data": {
-                    "$ref": "#/components/schemas/BO_Interaction_CreatedFields"
-                  }
-                }
-              }
-            ]
-          }
-        },
-        "CloudEventContext_EXT_BO_MarketingCampaign_Completed": {
-          "summary": "Marketing Campaign completed",
-          "payload": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CloudEventContext"
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "data": {
-                    "$ref": "#/components/schemas/BO_MarketingCampaign_CompletedFields"
-                  }
-                }
-              }
-            ]
-          }
-        },
-        "CloudEventContext_EXT_BO_MarketingCoupon_Changed": {
-          "summary": "Marketing Coupon Code Usage changed",
-          "payload": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CloudEventContext"
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "data": {
-                    "$ref": "#/components/schemas/BO_MarketingCoupon_ChangedFields"
-                  }
-                }
-              }
-            ]
-          }
-        },
-        "CloudEventContext_EXT_BO_MarketingPermission_Changed": {
-          "summary": "Marketing Permission changed",
-          "payload": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CloudEventContext"
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "data": {
-                    "$ref": "#/components/schemas/BO_MarketingPermission_ChangedFields"
-                  }
-                }
-              }
-            ]
-          }
-        },
-        "CloudEventContext_EXT_BO_MarketingPermission_Created": {
-          "summary": "Marketing Permission created",
-          "payload": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/CloudEventContext"
-              },
-              {
-                "type": "object",
-                "properties": {
-                  "data": {
-                    "$ref": "#/components/schemas/BO_MarketingPermission_CreatedFields"
-                  }
-                }
-              }
-            ]
-          }
-        }
-      },
-      "schemas": {
-        "BO_Interaction_CreatedFields": {
-          "type": "object",
-          "properties": {
-            "KEY": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "INTERACTION": {
-                    "type": "string",
-                    "example": "12345"
-                  }
-                }
-              }
-            },
-            "INTERACTIONTYPE": {
-              "type": "string",
-              "enum": [
-                "EMAIL_COMPLAINT",
-                "EMAIL_BOUNCE_HARD"
-              ],
-              "example": "EMAIL_COMPLAINT"
-            }
-          }
-        },
-        "BO_MarketingCampaign_CompletedFields": {
-          "type": "object",
-          "properties": {
-            "KEY": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "CAMPAIGN": {
-                    "type": "string",
-                    "example": "12345"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "BO_MarketingCoupon_ChangedFields": {
-          "type": "object",
-          "properties": {
-            "KEY": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "COUPON": {
-                    "type": "string",
-                    "example": "12345"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "BO_MarketingPermission_ChangedFields": {
-          "type": "object",
-          "properties": {
-            "KEY": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "MARKETINGPERMISSIONUUID": {
-                    "type": "string",
-                    "example": "12345"
-                  }
-                }
-              }
-            },
-            "CONTACTPERMISSION": {
-              "type": "string",
-              "enum": [
-                "Y",
-                "N"
-              ],
-              "example": "Y"
-            }
-          }
-        },
-        "BO_MarketingPermission_CreatedFields": {
-          "type": "object",
-          "properties": {
-            "KEY": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "MARKETINGPERMISSIONUUID": {
-                    "type": "string",
-                    "example": "12345"
-                  }
-                }
-              }
-            },
-            "CONTACTPERMISSION": {
-              "type": "string",
-              "enum": [
-                "Y",
-                "N"
-              ],
-              "example": "Y"
-            }
-          }
-        },
-        "CloudEventContext": {
-          "type": "object",
-          "required": [
-            "eventType",
-            "cloudEventsVersion",
-            "source",
-            "eventId"
-          ],
-          "properties": {
-            "eventType": {
-              "description": "Type of occurrence which has happened. Often this property is used for routing, observability, policy enforcement, etc.",
-              "type": "string",
-              "example": "BO.MarketingPermission.CreatedFields"
-            },
-            "cloudEventsVersion": {
-              "description": "The version of the CloudEvents specification which the event uses. This enables the interpretation of thecontext.",
-              "type": "string",
-              "example": "0.1"
-            },
-            "source": {
-              "description": "This describes the event producer.",
-              "type": "string",
-              "example": "https://S4HANAOD.sap.com"
-            },
-            "eventTime": {
-              "description": "Timestamp of when the event happened.",
-              "type": "string",
-              "format": "date-time",
-              "example": "2019-02-15T02:29:32Z"
-            },
-            "eventId": {
-              "description": "ID of the event.",
-              "type": "string",
-              "example": "HJjsGBhVHumMmTDn/W0pGQ=="
-            },
-            "schemaURL": {
-              "description": "A link to the schema that the data attribute adheres to.",
-              "type": "string",
-              "example": "https://S4HANAOD.sap.com/sap/opu/odata/IWXBE/BROWSER_SRV/"
-            },
-            "contentType": {
-              "description": "Describe the data encoding format",
-              "type": "string",
-              "example": "application/json"
-            },
-            "extensions": {
-              "description": "This is for additional metadata and this does not have a mandated structure.",
-              "type": "object"
-            }
-          }
-        }
-      }
-    }
   }
+}
