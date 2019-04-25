@@ -24,7 +24,7 @@ describe('tests app', function () {
                         .expect(200, done)
                 });
             });
-            describe('GET applications', function () {
+            describe('GET applications valid', function () {
                 it('should return 200', function (done) {
                     request(app)
                         .get('/v1/applications')
@@ -35,7 +35,7 @@ describe('tests app', function () {
                         .expect(200, done)
                 });
             });
-            describe('GET applications', function () {
+            describe('GET applications invalid', function () {
                 it('should return 400', function (done) {
                     request(app)
                         .get('/v1/applications')

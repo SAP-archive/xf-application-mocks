@@ -36,15 +36,3 @@ spec:
     port: 10000
   selector:
     app: xf-mock
----
-apiVersion: gateway.kyma-project.io/v1alpha2
-kind: Api
-metadata:
-  labels:
-    app: xf-mock
-  name: xf-mock
-spec:
-  hostname: xf
-  service:
-    name: xf-mock
-    port: 10000

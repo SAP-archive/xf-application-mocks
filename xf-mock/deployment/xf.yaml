@@ -44,7 +44,7 @@ metadata:
     app: xf-mock
   name: xf-mock
 spec:
-  hostname: xf
+  hostname: xf-mock
   service:
     name: xf-mock
     port: 10000
