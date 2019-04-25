@@ -3,12 +3,15 @@
   "description": "mocking XF application",
   "version": "0.1.0",
   "main": "app.js",
+  "engines": {
+    "node": ">=4"
+  },
   "scripts": {
     "test": "mocha",
     "start": "node . 10000"
   },
   "dependencies": {
-    "@varkes/openapi-mock": "0.5.0",
+    "@varkes/openapi-mock": "0.5.1",
     "express": "^4.16.4",
     "npm-check-updates": "^3.1.8"
   },
@@ -18,7 +21,7 @@
   },
   "private": true,
   "repository": {
-    "type": "ssh",
+    "type": "git",
     "url": "https://github.com/SAP/xf-application-mocks"
   }
 }

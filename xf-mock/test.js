@@ -2,7 +2,7 @@
 'use strict'
 
 const request = require('supertest');
-const mock = require("./app.js.js")
+const mock = require("./app")
 
 describe('tests app', function () {
     it('should work', function (done) {
