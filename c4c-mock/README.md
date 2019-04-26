@@ -30,7 +30,7 @@ kubectl label namespace mocks env=true
 
 and to deploy the mock
 ```bash
-curl https://github.com/SAP/xf-application-mocks/master/c4c-mock/deployment/xf.yaml | kubectl apply -n mocks -f -
+kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/c4c-mock/deployment/xf.yaml -n mocks
 ```
 
 That will expose the UI and API of the mock via a `ÀPI` resource and the UI will be accessible at: https://c4c.[yourDomain]
@@ -42,7 +42,7 @@ kubectl create namespace mocks
 
 and to deploy the mock
 ```bash
-curl https://github.com/SAP/xf-application-mocks/master/c4c-mock/deployment/k8s.yaml | kubectl apply -n mocks -f -
+kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/c4c-mock/deployment/k8s.yaml -n mocks
 ```
 
 That will deploy a `Service` of type ClusterIP, which need to expose manually via any Ingress type.
