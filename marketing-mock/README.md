@@ -1,72 +1,76 @@
 
 # Marketing Mock
 
-The marketing mock is substituting the **SAP Marketing Cloud**. It embeds the **varkes-app-connector-client** to connect to SAP CP Extension Factory and registers the bundled marketing APIs, which are also mocked using **varkes-odata-mock**. For details on the mocked APIs, see the [`varkes_config.js`](varkes_config.js) file.
+The marketing mock emulates SAP Marketing Cloud. It uses the **varkes-app-connector-client** to connect to SAP Cloud Platform Extension Factory and register the bundled marketing APIs, which are also mocked using **varkes-odata-mock**. For the list of mocked APIs, see [`varkes_config.js`](varkes_config.js).
 
-## Run local using docker
-To run the mock local use the following docker command.
+## Run local using Docker
+
+To run the mock locally, run:
 
 ```bash
 docker run -p 10000:10000 eu.gcr.io/kyma-project/xf-application-mocks/marketing-mock:latest
 ```
 
-## Access the Mock
-The UI is accessible at http://localhost:10000
+### Access the Mock
 
-The API to pair the mock with SAP CP Extension Factory is located at: http://localhost:10000/console
+* For mock UI, see `http://localhost:10000`
+* For the API to pair the mock with SAP Cloud Platform Extension Factory, see `http://localhost:10000/console`
+* For mocked APIs, see:
+    - `http://localhost:10000/sap/opu/api/sap/API_MKT_CAMPAIGN_SRV/console`
+    - `http://localhost:10000/sap/opu/odata/sap/API_MKT_CAMPAIGN_SRV/odata/`
+    - `http://localhost:10000/sap/opu/api/sap/API_MKT_CONTACT_SRV/console`
+    - `http://localhost:10000/sap/opu/odata/sap/API_MKT_CONTACT_SRV/odata/`
+    - `http://localhost:10000/sap/opu/api/sap/API_MKT_EXPORT_DEFINITION_SRV/console`
+    - `http://localhost:10000/sap/opu/odata/sap/API_MKT_EXPORT_DEFINITION_SRV/odata/`
+    - `http://localhost:10000/sap/opu/api/sap/API_MKT_INTERACTION_SRV/console`
+    - `http://localhost:10000/sap/opu/odata/sap/API_MKT_INTERACTION_SRV/odata/`
+    - `http://localhost:10000/sap/opu/api/sap/API_MKT_INTERACTION_CONTACT_SRV/console`
+    - `http://localhost:10000/sap/opu/odata/sap/API_MKT_INTERACTION_CONTACT_SRV/odata/`
 
-The mocked APIs are accessible as:
-- http://localhost:10000/sap/opu/api/sap/API_MKT_CAMPAIGN_SRV/console
-- http://localhost:10000/sap/opu/odata/sap/API_MKT_CAMPAIGN_SRV/odata/
-- http://localhost:10000/sap/opu/api/sap/API_MKT_CONTACT_SRV/console
-- http://localhost:10000/sap/opu/odata/sap/API_MKT_CONTACT_SRV/odata/
-- http://localhost:10000/sap/opu/api/sap/API_MKT_EXPORT_DEFINITION_SRV/console
-- http://localhost:10000/sap/opu/odata/sap/API_MKT_EXPORT_DEFINITION_SRV/odata/
-- http://localhost:10000/sap/opu/api/sap/API_MKT_INTERACTION_SRV/console
-- http://localhost:10000/sap/opu/odata/sap/API_MKT_INTERACTION_SRV/odata/
-- http://localhost:10000/sap/opu/api/sap/API_MKT_INTERACTION_CONTACT_SRV/console
-- http://localhost:10000/sap/opu/odata/sap/API_MKT_INTERACTION_CONTACT_SRV/odata/
+## Run mock on SAP Cloud Platform Extension Factory
 
-## Run mock on SAP CP Extension Factory
+To run the mock using SAP CP Extension Factory as a runtime environment, perform the following steps:
 
-To run the mock using SAP CP Extension Factory as runtime environment, run the following kubectl command to set up a namespace:
+1. Set up the Namespace:
 
 ```bash
 kubectl create namespace mocks
 kubectl label namespace mocks env=true
 ```
 
-and to deploy the mock
+2. Deploy the mock
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/marketing-mock/deployment/xf.yaml -n mocks
 ```
 
-That will expose the UI and API of the mock via a `ÀPI` resource and the UI will be accessible at: https://marketing.[yourDomain]
+This command exposes the UI and API of the mock via an `ÀPI` resource and the makes the UI accessible at `https://marketing.{yourDomain}`.
 
 ## Run mock on Kubernetes
+
+1. Set up the Namespace:
+
 ```bash
 kubectl create namespace mocks
 ```
 
-and to deploy the mock
+2. Deploy the mock:
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/marketing-mock/deployment/k8s.yaml -n mocks
 ```
 
-That will deploy a `Service` of type ClusterIP, which need to expose manually via any Ingress type.
+This command deploys a `Service` of a ClusterIP type. You need to expose it manually using any Ingress type.
 
 ## Development
 
-To build and run the mock local, you require `npm` only.
-
+Use `npm` to build and run the mock locally for development:
 ```
 npm install
 npm start
 ```
-will start the mock local on port 10000.
-The debug mode can be enabled having the environment variable set: DEBUG=true
+This starts the mock locally on port 10000.
+To enable the debug mode, set the **{DEBUG}** environment variable to `true`.
 
-To run the test, please execute:
+To run the test,  execute:
 ```
 npm test
 ```

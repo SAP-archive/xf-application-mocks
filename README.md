@@ -1,38 +1,33 @@
 # XF-Application-Mocks
 
-Contains lightweight substitutes for SAP applications to ease the development and testing of extension and integration scenarios based on [Varkes](https://github.com/kyma-incubator/varkes). In conjunction with SAP Cloud Platform Extension Factory (XF), the efficient implementation of application extensions is supported without the need for real SAP applications being accessible during development.
+Contains lightweight substitutes for SAP applications to ease the development and testing of extension and integration scenarios based on [Varkes](https://github.com/kyma-incubator/varkes). Together with SAP Cloud Platform Extension Factory, it allows for efficient implementation of application extensions without the need to access the real SAP applications during development.
 
-## Description
-The SAP CP Extension Factory is designed to easily extend and mash up different SAP applications and third-party APIs. To demo SAP CP Extension Factory functionality, a dummy application is required for integration rather than requiring a full-blown application setup.
+## Overview
+The SAP Cloud Platform Extension Factory is designed to easily extend and mash up different SAP applications and third-party APIs. To demo SAP Cloud Platform Extension Factory functionality, you can use a dummy application for integration rather than a full-blown application setup.
 
-A "mock" application allows you to save installation time, maintenance effort, and resources.
-A smart and lightweight mock of the application with a friendly user interface allows you to:
-- Successfully simulate requests or Events sent from the system to SAP CP Extension Factory as well as the responses from the SAP CP Extension Factory to the application.
-- Testing functionality in the SAP CP Extension Factory or on top of the SAP CP Extension Factory without worrying about the dependencies.
+A smart and lightweight mock application allows you to save installation time, maintenance effort, and resources. Use its user-friendly interface to:
+- Successfully simulate requests or Events sent from an external system to SAP Cloud Platform Extension Factory, and returned responses.
+- Testing functionality in or on top of the SAP Cloud Platform Extension Factory without worrying about the dependencies.
 
-The application mocks provided in this repository provide dummy implementations for most of the SAP CX applications. They are not bound to SAP CP Extension Factory scenarios and can be operated standalone. All mocks are built in an API-driven approach and are based on [Varkes](https://github.com/kyma-incubator/varkes).
-
-## Installation
-All application mocks are providing detailed installation instructions on its own, please refer to the related README file.
-
-### SAP Commerce Cloud Mock
-Application mock for SAP Commerce Cloud, see [commerce-mock](commerce-mock/README.md).
-
-### SAP Marketing Cloud Mock
-Application mock for SAP Marketing Cloud, see [marketing-mock](marketing-mock/README.md).
-
-### SAP Cloud for Customer Mock
-Application mock for SAP Cloud for Customer, see [c4c-mock](c4c-mock/README.md).
+The application mocks in this repository provide dummy implementations for most of the SAP Customer Experience applications. They are not bound to SAP Cloud Platform Extension Factory scenarios and can be operated standalone. All mocks are built with the API-driven approach in mind.
 
 ## Requirements
-The application mocks are NodeJS projects based on [Varkes](https://github.com/kyma-incubator/varkes) libraries and [Express](https://www.npmjs.com/package/express).
-To run them you require a Docker based container infrastructure, like pure Docker, Kubernetes or SAP CP Extension Factory. See the individual READMEs for detailed installation instructions.
+The application mocks are NodeJS projects based on [Varkes](https://github.com/kyma-incubator/varkes) libraries and [Express](https://www.npmjs.com/package/express) web framework.
+To run them, you require a Docker-based container infrastructure, like pure Docker, Kubernetes or SAP Cloud Platform Extension Factory. 
 
-## Known Issues
-The application mocks based on the `@varkes/odata-mock` (currently marketing and c4c) are not supporting any relations between the model definitions provided in the releated EDMX files. A solution supporting the full EDMX specification will be provided soon.
+## Installation
+Each application mock holds detailed installation instructions in a `README` file:
 
-## How to obtain support
-In case you find a bug or have ideas please open a [Github Issue](https://github.com/SAP/xf-application-mocks/issues). Feel free to contribute by creating a Pull Request.
+* [SAP Commerce Cloud Mock](commerce-mock/README.md)
+* [SAP Marketing Cloud Mock](marketing-mock/README.md)
+* [SAP Cloud for Customer Mock](c4c-mock/README.md)
+
+
+## Known issues
+The application mocks based on the `@varkes/odata-mock` (currently the marketing and c4c mocks) do not support any relations between the model definitions provided in the related `EDMX` files. A solution supporting the full `EDMX` specification will be provided soon.
+
+## Support
+If you find an issue or want to submit an idea, open a [Github Issue](https://github.com/SAP/xf-application-mocks/issues). Also, feel free to contribute by creating a pull request.
 
 ## License
 Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
