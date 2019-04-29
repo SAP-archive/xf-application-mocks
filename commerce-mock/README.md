@@ -53,7 +53,7 @@ kubectl create namespace mocks
 kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/commerce-mock/deployment/k8s.yaml -n mocks
 ```
 
-That will deploy a `Service` of type ClusterIP, which need to expose manually via any Ingress type.
+This command deploys a `Service` of a ClusterIP type. You need to expose it manually using any Ingress type.
 
 ## Development
 
