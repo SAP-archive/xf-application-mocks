@@ -10,8 +10,6 @@ spec:
     metadata:
       labels:
         app: marketing-mock
-      annotations:
-        sidecar.istio.io/inject: "true"
     spec:
       containers:
       - image: eu.gcr.io/kyma-project/xf-application-mocks/marketing-mock:latest

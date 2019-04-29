@@ -10,8 +10,6 @@ spec:
     metadata:
       labels:
         app: c4c-mock
-      annotations:
-        sidecar.istio.io/inject: "true"
     spec:
       containers:
       - image: eu.gcr.io/kyma-project/xf-application-mocks/c4c-mock:latest

@@ -10,8 +10,6 @@ spec:
     metadata:
       labels:
         app: xf-mock
-      annotations:
-        sidecar.istio.io/inject: "true"
     spec:
       containers:
       - image: eu.gcr.io/kyma-project/xf-mock:latest
