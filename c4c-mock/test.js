@@ -52,13 +52,13 @@ describe('tests odata controllers', function () {
                         .expect(200, done)
                 });
             });
-            describe('GET connection info', function () {
-                it('should return 400', function (done) {
+            describe('GET app info', function () {
+                it('should return 200', function (done) {
                     request(app)
-                        .get('/connection')
+                        .get('/info')
                         .set('Accept', 'application/json')
                         .expect('Content-Type', 'application/json; charset=utf-8')
-                        .expect(400, done)
+                        .expect(200, done)
                 });
             });
 
