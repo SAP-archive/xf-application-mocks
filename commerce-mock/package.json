@@ -8,11 +8,10 @@
     "start": "node . 10000"
   },
   "dependencies": {
-    "@varkes/app-connector-client": "0.5.2",
-    "@varkes/cockpit": "0.5.2",
-    "@varkes/openapi-mock": "0.5.2",
-    "express": "^4.16.4",
-    "npm-check-updates": "^3.1.8"
+    "@varkes/app-connector-client": "0.5.3",
+    "@varkes/cockpit": "0.5.3",
+    "@varkes/openapi-mock": "0.5.3",
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "mocha": "^6.1.4",
