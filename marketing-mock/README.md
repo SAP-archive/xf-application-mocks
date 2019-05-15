@@ -1,7 +1,7 @@
 
 # Marketing Mock
 
-The marketing mock emulates SAP Marketing Cloud. It uses the **varkes-app-connector-client** to connect to SAP Cloud Platform Extension Factory and register the bundled marketing APIs, which are also mocked using **varkes-odata-mock**. For the list of mocked APIs, see [`varkes_config.js`](varkes_config.js).
+The marketing mock emulates SAP Marketing Cloud. It uses the **varkes-api-server** to connect to SAP Cloud Platform Extension Factory and register the bundled marketing APIs, which are also mocked using **varkes-odata-mock**. For the list of mocked APIs, see [`varkes_config.js`](varkes_config.js).
 
 ## Run local using Docker
 

@@ -2,7 +2,7 @@
 'use strict'
 
 const mock = require('@varkes/openapi-mock')
-const client = require('@varkes/app-connector-client')
+const server = require('@varkes/api-server')
 const cockpit = require("@varkes/cockpit")
 const app = require('express')()
 const orders = require('./orders.json');
@@ -16,7 +16,7 @@ var runAsync = async () => {
   try {
     customizeMock(app)
     app.use(await mock.init("./varkes_config.json", __dirname))
-    app.use(await client.init("./varkes_config.json", __dirname, process.env.NODE_PORT != -1 ? process.env.NODE_PORT : null))
+    app.use(await server.init("./varkes_config.json", __dirname))
     app.use(await cockpit.init())
     if (port)
       app.listen(port, function () {
