@@ -16,8 +16,8 @@ docker run -p 10000:10000 eu.gcr.io/kyma-project/xf-application-mocks/c4c-mock:l
 * For the mock UI, see `http://localhost:10000`
 * For the API used to to pair the mock with SAP Cloud Platform Extension Factory, see `http://localhost:10000/console`
 * For mocked APIs, see:
-    - `http://localhost:10000/sap/byd/api/v1/c4codata/console`
-    - `http://localhost:10000/sap/byd/odata/v1/c4codata/`
+    - `http://localhost:10000/sap/c4c/odata/v1/c4codataapi/console`
+    - `http://localhost:10000/sap/c4c/odata/v1/c4codataapi/`
 
 ## Run mock using SAP CP Extension Factory
 
