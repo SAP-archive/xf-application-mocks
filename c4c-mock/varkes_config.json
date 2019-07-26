@@ -13,7 +13,7 @@
         {
             "name": "SAP Cloud for Customer - API",
             "description": "Use this OData API, to query, read, add, update and delete data from and into SAP Cloud for Customer.",
-            "basepath": "/sap/byd/odata/v1/c4codata",
+            "basepath": "/sap/c4c/odata/v1/c4codataapi",
             "provider": "SAP",
             "specification": "apis/API_SRV.xml",
             "type": "odata",
