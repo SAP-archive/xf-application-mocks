@@ -16,8 +16,7 @@
             "basepath": "/rest/v2",
             "specification": "apis/commercewebservices.yaml",
             "provider": "SAP",
-            "type": "openapi",
-            "auth": "oauth"
+            "type": "openapi"
         },
         {
             "name": "SAP Commerce Cloud - Assisted Service Webservices",
@@ -25,8 +24,7 @@
             "basepath": "/assistedservicewebservices",
             "specification": "apis/assistedservicewebservices.yaml",
             "provider": "SAP",
-            "type": "openapi",
-            "auth": "oauth"
+            "type": "openapi"
         },
         {
             "name": "SAP Commerce Cloud - Order Management Webservices",
@@ -34,8 +32,7 @@
             "basepath": "/ordermanagementwebservices",
             "specification": "apis/ordermanagementwebservices.yaml",
             "provider": "SAP",
-            "type": "openapi",
-            "auth": "oauth"
+            "type": "openapi"
         },
         {
             "name": "SAP Commerce Cloud - Coupon Webservices",
@@ -43,8 +40,7 @@
             "basepath": "/couponwebservices",
             "specification": "apis/couponwebservices.yaml",
             "provider": "SAP",
-            "type": "openapi",
-            "auth": "oauth"
+            "type": "openapi"
         },
         {
             "name": "SAP Commerce Cloud - Warehousing Webservices",
@@ -52,8 +48,7 @@
             "basepath": "/warehousingwebservices",
             "specification": "apis/warehousingwebservices.yaml",
             "provider": "SAP",
-            "type": "openapi",
-            "auth": "oauth"
+            "type": "openapi"
         }
     ]
 }
