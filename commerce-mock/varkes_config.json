@@ -16,6 +16,7 @@
             "basepath": "/rest/v2",
             "specification": "apis/commercewebservices.yaml",
             "provider": "SAP",
+            "auth": "oauth",
             "type": "openapi"
         },
         {
@@ -24,6 +25,7 @@
             "basepath": "/assistedservicewebservices",
             "specification": "apis/assistedservicewebservices.yaml",
             "provider": "SAP",
+            "auth": "oauth",
             "type": "openapi"
         },
         {
@@ -32,6 +34,7 @@
             "basepath": "/ordermanagementwebservices",
             "specification": "apis/ordermanagementwebservices.yaml",
             "provider": "SAP",
+            "auth": "oauth",
             "type": "openapi"
         },
         {
@@ -40,6 +43,7 @@
             "basepath": "/couponwebservices",
             "specification": "apis/couponwebservices.yaml",
             "provider": "SAP",
+            "auth": "oauth",
             "type": "openapi"
         },
         {
@@ -48,6 +52,7 @@
             "basepath": "/warehousingwebservices",
             "specification": "apis/warehousingwebservices.yaml",
             "provider": "SAP",
+            "auth": "oauth",
             "type": "openapi"
         }
     ]
