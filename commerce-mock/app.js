@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 'use strict'
 
+const config = require('@varkes/configuration')
 const mock = require('@varkes/openapi-mock')
 const server = require('@varkes/api-server')
 const cockpit = require("@varkes/cockpit")
@@ -15,9 +16,10 @@ var runAsync = async () => {
 
   try {
     customizeMock(app)
-    app.use(await mock.init("./varkes_config.json", __dirname))
-    app.use(await server.init("./varkes_config.json", __dirname))
-    app.use(await cockpit.init())
+    let configuration = config.resolveFile("./varkes_config.json", __dirname)
+    app.use(await mock.init(configuration))
+    app.use(await server.init(configuration))
+    app.use(await cockpit.init(configuration))
     if (port)
       app.listen(port, function () {
         console.info("Started application on port %d", port)

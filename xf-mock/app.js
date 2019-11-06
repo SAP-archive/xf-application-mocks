@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 'use strict'
 
+const config = require("@varkes/configuration")
 const mock = require("@varkes/openapi-mock")
 const app = require('express')()
 
@@ -11,7 +12,8 @@ var runAsync = async () => {
     }
 
     try {
-        app.use(await mock.init("./varkes_config.json"))
+        let configuration = config.resolveFile("./varkes_config.json")
+        app.use(await mock.init(configuration))
         if (port)
             app.listen(port, function () {
                 console.info("Started application on port %d", port)
