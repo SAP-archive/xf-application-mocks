@@ -1,5 +1,5 @@
 # Commerce Mock
-The commerce mock emulates SAP Commerce Cloud. It uses the **varkes-api-server** to connect to SAP Cloud Platform Extension Factory and register the bundled commerce APIs, which are also mocked using the **varkes-openapi-mock**. For the list of mocked APIs, see [`varkes_config.js`](varkes_config.js).
+The commerce mock emulates SAP Commerce Cloud. It uses the **varkes-api-server** to connect to SAP Cloud Platform Extension Factory and register the bundled commerce APIs, which are also mocked using the **varkes-openapi-mock**. For the list of mocked APIs, see [`varkes_config.json`](varkes_config.json).
 
 ## Run locally using Docker
 
