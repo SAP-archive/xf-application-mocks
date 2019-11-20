@@ -1,7 +1,7 @@
 
 # Cloud for Customer Mock
 
-This application emulates SAP Cloud for Customer. It uses the **varkes-api-server** to connect to SAP Cloud Platform Extension Factory and register the bundled ODATA APIs which are also mocked using the  **varkes-odata-mock**. For the list of mocked APIs, see [`varkes_config.js`](varkes_config.js).
+This application emulates SAP Cloud for Customer. It uses the **varkes-api-server** to connect to SAP Cloud Platform Extension Factory and register the bundled ODATA APIs which are also mocked using the  **varkes-odata-mock**. For the list of mocked APIs, see [`varkes_config.json`](varkes_config.json).
 
 ## Run locally using Docker
 
