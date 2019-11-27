@@ -12,7 +12,7 @@ spec:
         app: xf-mock
     spec:
       containers:
-      - image: eu.gcr.io/kyma-project/xf-mock:latest
+      - image: eu.gcr.io/kyma-project/xf-application-mocks/xf-mock:latest
         imagePullPolicy: Always
         name: xf-mock
         ports:
