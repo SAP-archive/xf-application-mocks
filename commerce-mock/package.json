@@ -8,14 +8,14 @@
     "start": "node . 10000"
   },
   "dependencies": {
-    "@varkes/configuration": "0.8.0",
-    "@varkes/api-server": "0.8.0",
-    "@varkes/cockpit": "0.8.0",
-    "@varkes/openapi-mock": "0.8.0",
+    "@varkes/configuration": "0.9.1",
+    "@varkes/api-server": "0.9.1",
+    "@varkes/cockpit": "0.9.1",
+    "@varkes/openapi-mock": "0.9.1",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "mocha": "^6.2.2",
+    "mocha": "^7.0.1",
     "supertest": "^4.0.2"
   },
   "private": true,

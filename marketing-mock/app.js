@@ -14,7 +14,7 @@ var runAsync = async () => {
     }
 
     try {
-        let configuration = config.resolveFile("./varkes_config.json", __dirname)
+        let configuration = await config.resolveFile("./varkes_config.json", __dirname)
         app.use(await mock.init(configuration))
         app.use(await server.init(configuration))
         app.use(await cockpit.init(configuration))
