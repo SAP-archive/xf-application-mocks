@@ -6,7 +6,7 @@ const mock = require("./app.js")
 
 describe('tests odata controllers', function () {
     it('should work', function (done) {
-        this.timeout(10000);
+        this.timeout(20000);
         mock.then(function (app) {
 
             describe('GET Campaigns via API', function () {

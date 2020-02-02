@@ -6,7 +6,7 @@ const mock = require("./app.js")
 
 describe('test app', function () {
     it('should work', function (done) {
-        this.timeout(10000);
+        this.timeout(20000);
         mock.then(function (app) {
 
             describe('GET console', function () {
