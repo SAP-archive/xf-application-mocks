@@ -11,8 +11,8 @@
     "start": "node . 10000"
   },
   "dependencies": {
-    "@varkes/configuration": "0.9.1",
-    "@varkes/openapi-mock": "0.9.1",
+    "@varkes/configuration": "0.9.2",
+    "@varkes/openapi-mock": "0.9.2",
     "express": "^4.17.1"
   },
   "devDependencies": {
