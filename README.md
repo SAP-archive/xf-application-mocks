@@ -22,6 +22,8 @@ Each application mock holds detailed installation instructions in a `README` fil
 * [SAP Marketing Cloud Mock](marketing-mock/README.md)
 * [SAP Cloud for Customer Mock](c4c-mock/README.md)
 
+For a convinient installation on an existing Kyma cluster please consider to use the [XF-Addons](https://github.com/sap/xf-addons) which can be configured as Addon Repository by configuring: `github.com/sap/xf-addons//addons/index.yaml?ref=latest`
+
 
 ## Known issues
 The application mocks based on the `@varkes/odata-mock` (currently the marketing and c4c mocks) do not support any relations between the model definitions provided in the related `EDMX` files. A solution supporting the full `EDMX` specification will be provided soon.
