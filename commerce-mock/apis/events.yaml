@@ -1,9 +1,9 @@
 ---
 asyncapi: 1.0.0
 info:
-  title: ec-all-events
+  title: Events
   version: v1
-  description: EC Events v1
+  description: Set of events emitted typically by SAP Commerce Cloud
 topics:
   customer.created.v1:
     subscribe:

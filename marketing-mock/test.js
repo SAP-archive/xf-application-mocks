@@ -12,10 +12,10 @@ describe('tests odata controllers', function () {
             describe('GET Campaigns via API', function () {
                 it('should return 200', function (done) {
                     request(app)
-                        .get('/sap/opu/api/sap/API_MKT_CAMPAIGN_SRV/Campaigns')
+                        .get('/api/sap/opu/odata/sap/API_MKT_CAMPAIGN_SRV/Campaigns')
                         .set('Accept', 'application/json')
-                        .expect('Content-Type', 'application/json; charset=utf-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'application/json; charset=utf-8', document)
                 });
             });
             describe('GET Campaigns via ODATA', function () {
@@ -23,17 +23,17 @@ describe('tests odata controllers', function () {
                     request(app)
                         .get('/sap/opu/odata/sap/API_MKT_CAMPAIGN_SRV/Campaigns')
                         .set('Accept', 'application/json')
-                        .expect('Content-Type', 'application/json; charset=utf-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'application/json; charset=utf-8', done)
                 });
             });
             describe('GET MarketingArea via API', function () {
                 it('should return 200', function (done) {
                     request(app)
-                        .get('/sap/opu/api/sap/API_MKT_CONTACT_SRV/MarketingAreas')
+                        .get('/api/sap/opu/odata/sap/API_MKT_CONTACT_SRV/MarketingAreas')
                         .set('Accept', 'application/json')
-                        .expect('Content-Type', 'application/json; charset=utf-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'application/json; charset=utf-8', done)
                 });
             });
             describe('GET MarketingArea via ODATA', function () {
@@ -41,33 +41,33 @@ describe('tests odata controllers', function () {
                     request(app)
                         .get('/sap/opu/odata/sap/API_MKT_CONTACT_SRV/MarketingAreas')
                         .set('Accept', 'application/json')
-                        .expect('Content-Type', 'application/json; charset=utf-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'application/json; charset=utf-8', done)
                 });
             });
             describe('GET odata metadata', function () {
                 it('should return 200', function (done) {
                     request(app)
                         .get('/sap/opu/odata/sap/API_MKT_CAMPAIGN_SRV/$metadata')
-                        .expect('Content-Type', 'application/xml; charset=utf-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'application/xml; charset=utf-8', done)
                 });
             });
             describe('GET console', function () {
                 it('should return 200', function (done) {
                     request(app)
-                        .get('/sap/opu/api/sap/API_MKT_CAMPAIGN_SRV/console/')
+                        .get('/api/sap/opu/odata/sap/API_MKT_CAMPAIGN_SRV/console/')
                         .set('Accept', 'application/json')
-                        .expect('Content-Type', 'text/html; charset=UTF-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'text/html; charset=UTF-8', done)
                 });
             });
             describe('GET metadata', function () {
                 it('should return 200', function (done) {
                     request(app)
                         .get('/metadata')
-                        .expect('Content-Type', 'text/yaml; charset=UTF-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'text/yaml; charset=UTF-8', done)
                 });
             });
             describe('GET app info', function () {
@@ -75,8 +75,8 @@ describe('tests odata controllers', function () {
                     request(app)
                         .get('/info')
                         .set('Accept', 'application/json')
-                        .expect('Content-Type', 'application/json; charset=utf-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'application/json; charset=utf-8', done)
                 });
             });
 

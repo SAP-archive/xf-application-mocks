@@ -1,6 +1,6 @@
 {
   "name": "marketing-mock",
-  "description": "mocking SAP marketing application",
+  "description": "A mock for SAP Marketing Cloud",
   "version": "0.1.0",
   "main": "app.js",
   "engines": {
@@ -11,10 +11,10 @@
     "test": "mocha"
   },
   "dependencies": {
-    "@varkes/configuration": "0.9.3",
-    "@varkes/api-server": "0.9.3",
-    "@varkes/cockpit": "0.9.3",
-    "@varkes/odata-mock": "0.9.3",
+    "@varkes/configuration": "0.10.0",
+    "@varkes/api-server": "0.10.0",
+    "@varkes/cockpit": "0.10.0",
+    "@varkes/odata-mock": "0.10.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
