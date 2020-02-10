@@ -1,10 +1,13 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: commerce-mock
   labels:
     app: commerce-mock
 spec:
+  selector:
+    matchLabels:
+      app: commerce-mock
   replicas: 1
   template:
     metadata:
@@ -21,6 +24,13 @@ spec:
         env:
         - name: DEBUG
           value: "true"
+        resources:
+          requests:
+            memory: "150Mi"
+            cpu: "50m"
+          limits:
+            memory: "250Mi"
+            cpu: "100m"
 ---
 apiVersion: v1
 kind: Service

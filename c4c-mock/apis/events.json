@@ -1,9 +1,9 @@
 {
   "asyncapi": "1.0.0",
   "info": {
-    "title": "SAP Cloud for Customer events",
+    "title": "Events",
     "version": "v1",
-    "description": "All events of SAP Cloud for Customer"
+    "description": "Set of events emitted typically by SAP Cloud for Customer"
   },
   "topics": {
     "Account.Root.Created.v1": {

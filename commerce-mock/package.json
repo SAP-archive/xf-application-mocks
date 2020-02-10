@@ -1,6 +1,6 @@
 {
   "name": "commerce-mock",
-  "description": "mocking SAP commerce application",
+  "description": "A mock of SAP Commerce Cloud",
   "version": "0.1.0",
   "main": "app.js",
   "scripts": {
@@ -8,10 +8,11 @@
     "start": "node . 10000"
   },
   "dependencies": {
-    "@varkes/configuration": "0.9.3",
-    "@varkes/api-server": "0.9.3",
-    "@varkes/cockpit": "0.9.3",
-    "@varkes/openapi-mock": "0.9.3",
+    "@varkes/configuration": "0.10.0",
+    "@varkes/api-server": "0.10.0",
+    "@varkes/cockpit": "0.10.0",
+    "@varkes/openapi-mock": "0.10.0",
+    "@varkes/odata-mock": "0.10.0",
     "express": "^4.17.1"
   },
   "devDependencies": {

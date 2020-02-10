@@ -1,9 +1,9 @@
 {
     "asyncapi": "1.0.0",
     "info": {
-        "title": "SAP Marketing Cloud Business Events",
+        "title": "Business Events",
         "version": "1.0.0",
-        "description": "SAP Marketing Cloud Business Events"
+        "description": "Set of events emitted typically by SAP Marketing Cloud"
     },
     "topics": {
         "bo.marketingcoupon.changed.v1": {

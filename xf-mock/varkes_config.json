@@ -7,7 +7,6 @@
             "metadata":"/api",
             "specification": "apis/api.yaml",
             "provider": "SAP",
-            "type":"openapi",
             "auth": "none"
         }
     ]

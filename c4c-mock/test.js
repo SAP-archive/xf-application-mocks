@@ -12,10 +12,10 @@ describe('tests odata controllers', function () {
             describe('GET AnswerAttachments via API', function () {
                 it('should return 200', function (done) {
                     request(app)
-                        .get('/sap/c4c/api/v1/c4codataapi/AnswerAttachments')
+                        .get('/api/sap/c4c/odata/v1/c4codataapi/AnswerAttachments')
                         .set('Accept', 'application/json')
-                        .expect('Content-Type', 'application/json; charset=utf-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'application/json; charset=utf-8', done)
                 });
             });
             describe('GET AnswerAttachments via ODATA', function () {
@@ -23,33 +23,33 @@ describe('tests odata controllers', function () {
                     request(app)
                         .get('/sap/c4c/odata/v1/c4codataapi/AnswerAttachments')
                         .set('Accept', 'application/json')
-                        .expect('Content-Type', 'application/json; charset=utf-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'application/json; charset=utf-8', done)
                 });
             });
             describe('GET odata metadata', function () {
                 it('should return 200', function (done) {
                     request(app)
                         .get('/sap/c4c/odata/v1/c4codataapi/$metadata')
-                        .expect('Content-Type', 'application/xml; charset=utf-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'application/xml; charset=utf-8', done)
                 });
             });
             describe('GET console', function () {
                 it('should return 200', function (done) {
                     request(app)
-                        .get('/sap/c4c/api/v1/c4codataapi/console/')
+                        .get('/api/sap/c4c/odata/v1/c4codataapi/console/')
                         .set('Accept', 'application/json')
-                        .expect('Content-Type', 'text/html; charset=UTF-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'text/html; charset=UTF-8', done)
                 });
             });
             describe('GET metadata', function () {
                 it('should return 200', function (done) {
                     request(app)
                         .get('/metadata')
-                        .expect('Content-Type', 'text/yaml; charset=UTF-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'text/yaml; charset=UTF-8', done)
                 });
             });
             describe('GET app info', function () {
@@ -57,8 +57,8 @@ describe('tests odata controllers', function () {
                     request(app)
                         .get('/info')
                         .set('Accept', 'application/json')
-                        .expect('Content-Type', 'application/json; charset=utf-8')
-                        .expect(200, done)
+                        .expect(200)
+                        .expect('Content-Type', 'application/json; charset=utf-8', done)
                 });
             });
 
