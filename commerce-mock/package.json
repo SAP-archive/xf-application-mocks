@@ -8,11 +8,11 @@
     "start": "node . 10000"
   },
   "dependencies": {
-    "@varkes/configuration": "0.10.1",
-    "@varkes/api-server": "0.10.1",
-    "@varkes/cockpit": "0.10.1",
-    "@varkes/openapi-mock": "0.10.1",
-    "@varkes/odata-mock": "0.10.1",
+    "@varkes/configuration": "0.10.2",
+    "@varkes/api-server": "0.10.2",
+    "@varkes/cockpit": "0.10.2",
+    "@varkes/openapi-mock": "0.10.2",
+    "@varkes/odata-mock": "0.10.2",
     "express": "^4.17.1"
   },
   "devDependencies": {
