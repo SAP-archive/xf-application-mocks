@@ -15,7 +15,7 @@ describe('tests odata controllers', function () {
                         .get('/api/sap/opu/odata/sap/API_MKT_CAMPAIGN_SRV/Campaigns')
                         .set('Accept', 'application/json')
                         .expect(200)
-                        .expect('Content-Type', 'application/json; charset=utf-8', document)
+                        .expect('Content-Type', 'application/json; charset=utf-8', done)
                 });
             });
             describe('GET Campaigns via ODATA', function () {
