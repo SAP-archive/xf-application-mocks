@@ -11,10 +11,10 @@
     "test": "mocha"
   },
   "dependencies": {
-    "@varkes/configuration": "0.10.0",
-    "@varkes/api-server": "0.10.0",
-    "@varkes/cockpit": "0.10.0",
-    "@varkes/odata-mock": "0.10.0",
+    "@varkes/configuration": "0.10.1",
+    "@varkes/api-server": "0.10.1",
+    "@varkes/cockpit": "0.10.1",
+    "@varkes/odata-mock": "0.10.1",
     "express": "^4.17.1"
   },
   "devDependencies": {

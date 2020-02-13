@@ -38,9 +38,6 @@ pipeline {
                         },
                         "c4c-mock": {
                             execute('c4c-mock')
-                        },
-                        "xf-mock": {
-                            execute('xf-mock')
                         }
                     )
                 }
