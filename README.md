@@ -22,7 +22,20 @@ Each application mock holds detailed installation instructions in a `README` fil
 * [SAP Marketing Cloud Mock](marketing-mock/README.md)
 * [SAP Cloud for Customer Mock](c4c-mock/README.md)
 
-For a convinient installation on an existing Kyma cluster please consider to use the [XF-Addons](https://github.com/sap/xf-addons) which can be configured as Addon Repository by configuring: `github.com/sap/xf-addons//addons/index.yaml?ref=latest`
+# Usage
+To run the mocks using Kyma as the runtime environment, run the following kubectl command to set up a namespace:
+```
+kubectl create namespace mocks
+kubectl label namespace mocks env=true
+```
+and to deploy the mock on SAP CP Extension Factory
+```
+kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/commerce-mock/deployment/xf.yaml
+kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/marketing-mock/deployment/xf.yaml
+kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/c4c-mock/deployment/xf.yaml
+```
+
+For an even more convinient installation on an existing Kyma cluster please consider to use the [XF-Addons](https://github.com/sap/xf-addons) which can be configured as Addon Repository by configuring: `github.com/sap/xf-addons//addons/index.yaml?ref=latest`
 
 
 ## Known issues
