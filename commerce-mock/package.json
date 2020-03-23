@@ -8,15 +8,15 @@
     "start": "node . 10000"
   },
   "dependencies": {
-    "@varkes/configuration": "0.10.2",
-    "@varkes/api-server": "0.10.2",
-    "@varkes/cockpit": "0.10.2",
-    "@varkes/openapi-mock": "0.10.2",
-    "@varkes/odata-mock": "0.10.2",
+    "@varkes/configuration": "0.10.3",
+    "@varkes/api-server": "0.10.3",
+    "@varkes/cockpit": "0.10.3",
+    "@varkes/openapi-mock": "0.10.3",
+    "@varkes/odata-mock": "0.10.3",
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "mocha": "^7.0.1",
+    "mocha": "^7.1.1",
     "supertest": "^4.0.2"
   },
   "private": true,

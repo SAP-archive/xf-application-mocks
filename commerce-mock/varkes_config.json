@@ -2,6 +2,7 @@
     "application": "SAP Commerce Cloud",
     "provider": "SAP",
     "logo": "logo.svg",
+    "package": "SAP Commerce Cloud",
     "events": [
         {
             "specification": "apis/events.yaml"
