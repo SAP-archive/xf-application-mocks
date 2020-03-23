@@ -2,6 +2,7 @@
     "application": "SAP Marketing Cloud",
     "provider": "SAP",
     "logo": "logo.svg",
+    "package": "SAP Marketing Cloud",
     "events": [
         {
             "specification": "apis/events.json"

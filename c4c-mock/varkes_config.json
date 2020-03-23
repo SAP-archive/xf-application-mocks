@@ -2,6 +2,7 @@
     "application": "SAP Cloud for Customer",
     "logo": "logo.svg",
     "provider": "SAP",
+    "package": "SAP Cloud for Customer",
     "events": [
         {
             "specification": "apis/events.json"
