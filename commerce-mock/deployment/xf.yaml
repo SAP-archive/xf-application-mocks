@@ -1,58 +1,17 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: commerce-mock
-  labels:
-    app: commerce-mock
-spec:
-  selector:
-    matchLabels:
-      app: commerce-mock
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: commerce-mock
-    spec:
-      containers:
-      - image: eu.gcr.io/kyma-project/xf-application-mocks/commerce-mock:latest
-        imagePullPolicy: Always
-        name: commerce-mock
-        ports:
-        - name: http
-          containerPort: 10000
-        env:
-        - name: DEBUG
-          value: "true"
-        resources:
-          requests:
-            memory: "150Mi"
-            cpu: "50m"
-          limits:
-            memory: "250Mi"
-            cpu: "100m"
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: commerce-mock
-  labels:
-    app: commerce-mock
-spec:
-  ports:
-  - name: http
-    port: 10000
-  selector:
-    app: commerce-mock
----
 apiVersion: gateway.kyma-project.io/v1alpha2
-kind: Api
+kind: APIRule
 metadata:
   labels:
     app: commerce-mock
   name: commerce-mock
 spec:
-  hostname: commerce
+  gateway: kyma-gateway.kyma-system.svc.cluster.local
   service:
     name: commerce-mock
     port: 10000
+    host: commerce
+  rules:
+    - path: /.*
+      methods: ["GET"]
+      accessStrategies:
+        - handler: allow

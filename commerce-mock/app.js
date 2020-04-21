@@ -18,10 +18,12 @@ var runAsync = async () => {
   try {
     customizeMock(app)
     let configuration = await config.resolveFile("./varkes_config.json", __dirname)
-    app.use(await odata.init(configuration))
-    app.use(await openapi.init(configuration))
     app.use(await cockpit.init(configuration))
     app.use(await server.init(configuration))
+    app.use(await odata.init(configuration))
+    app.use(await openapi.init(configuration))
+    
+    
     if (port)
       app.listen(port, function () {
         console.info("Started application on port %d", port)

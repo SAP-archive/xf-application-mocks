@@ -16,8 +16,8 @@ docker run -p 10000:10000 eu.gcr.io/kyma-project/xf-application-mocks/c4c-mock:l
 * For the mock UI, see `http://localhost:10000`
 * For the API used to to pair the mock with SAP Cloud Platform Extension Factory, see `http://localhost:10000/console`
 * For mocked APIs, see:
-    - `http://localhost:10000/sap/c4c/odata/v1/c4codataapi/console`
-    - `http://localhost:10000/sap/c4c/odata/v1/c4codataapi/`
+  * `http://localhost:10000/sap/c4c/odata/v1/c4codataapi/console`
+  * `http://localhost:10000/sap/c4c/odata/v1/c4codataapi/`
 
 ## Run mock using SAP CP Extension Factory
 
@@ -27,15 +27,16 @@ To run the mock using SAP CP Extension Factory as a runtime environment, perform
 
 ```bash
 kubectl create namespace mocks
-kubectl label namespace mocks env=true
 ```
 
 2. Deploy the mock
+
 ```bash
+kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/c4c-mock/deployment/k8s.yaml -n mocks
 kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/c4c-mock/deployment/xf.yaml -n mocks
 ```
 
-This command exposes the UI and API of the mock via an `ÀPI` resource and makes the UI accessible at: `https://c4c.{yourDomain}`
+These commands expose the UI and API of the mock via an `API` resource and makes the UI accessible at: `https://c4c.{yourDomain}`
 
 ## Run mock on Kubernetes
 
@@ -46,6 +47,7 @@ kubectl create namespace mocks
 ```
 
 2. Deploy the mock:
+
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/c4c-mock/deployment/k8s.yaml -n mocks
 ```
@@ -56,14 +58,16 @@ This command deploys a `Service` of a ClusterIP type. You need to expose it manu
 
 Use `npm` to build and run the mock locally for development:
 
-```
+```bash
 npm install
 npm start
 ```
+
 This starts the mock locally on port 10000.
 To enable the debug mode, set the **{DEBUG}** environment variable to `true`.
 
-To run the test,  execute:
-```
+To run the test, execute:
+
+```bash
 npm test
 ```
