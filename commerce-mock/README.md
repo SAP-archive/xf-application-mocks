@@ -7,7 +7,11 @@ The commerce mock emulates SAP Commerce Cloud. It uses the **varkes-api-server**
 To run the mock locally, run:
 
 ```bash
-docker run -p 10000:10000 eu.gcr.io/kyma-project/xf-application-mocks/commerce-mock:latest
+docker run -d \
+  -p 10000:10000 \
+  --restart=always \
+  --name commerce-mock \
+  eu.gcr.io/kyma-project/xf-application-mocks/commerce-mock:latest
 ```
 
 ### Access the mock locally
