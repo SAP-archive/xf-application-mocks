@@ -24,6 +24,8 @@ spec:
         env:
         - name: DEBUG
           value: "true"
+        - name: RENEWCERT_JOB_CRON
+          value: "00 00 1 * * *"
         resources:
           requests:
             memory: "150Mi"
