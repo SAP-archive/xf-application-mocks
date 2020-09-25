@@ -45,5 +45,5 @@ The application mocks based on the `@varkes/odata-mock` (currently the marketing
 If you find an issue or want to submit an idea, open a [Github Issue](https://github.com/SAP/xf-application-mocks/issues). Also, feel free to contribute by creating a pull request.
 
 ## License
-Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
+Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
 This file is licensed under the `SAP API DEFINITIONS LICENSE` except as noted otherwise in the [LICENSE](LICENSE) file.
