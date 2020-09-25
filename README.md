@@ -2,7 +2,7 @@
 
 Contains lightweight substitutes for SAP applications to ease the development and testing of extension and integration scenarios based on [Varkes](https://github.com/kyma-incubator/varkes). Together with SAP Cloud Platform Extension Factory, it allows for efficient implementation of application extensions without the need to access the real SAP applications during development.
 
-## Overview
+## Description
 The SAP Cloud Platform Extension Factory is designed to easily extend and mash up different SAP applications and third-party APIs. To demo SAP Cloud Platform Extension Factory functionality, you can use a dummy application for integration rather than a full-blown application setup.
 
 A smart and lightweight mock application allows you to save installation time, maintenance effort, and resources. Use its user-friendly interface to:
