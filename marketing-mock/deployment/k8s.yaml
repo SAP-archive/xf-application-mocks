@@ -8,6 +8,9 @@ spec:
   selector:
     matchLabels:
       app: marketing-mock
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 1
   replicas: 1
   template:
     metadata:
@@ -26,6 +29,9 @@ spec:
           value: "true"
         - name: RENEWCERT_JOB_CRON
           value: "00 00 */12 * * *"
+        volumeMounts:
+        - mountPath: "/app/keys"
+          name: marketing-mock-volume
         resources:
           requests:
             memory: "150Mi"
@@ -33,6 +39,10 @@ spec:
           limits:
             memory: "250Mi"
             cpu: "100m"
+      volumes:
+      - name: marketing-mock-volume
+        persistentVolumeClaim:
+          claimName: marketing-mock
 ---
 apiVersion: v1
 kind: Service
@@ -46,3 +56,16 @@ spec:
     port: 10000
   selector:
     app: marketing-mock
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: marketing-mock
+  labels:
+    app: marketing-mock
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
