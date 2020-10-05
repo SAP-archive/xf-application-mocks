@@ -1,5 +1,7 @@
 # XF-Application-Mocks
 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/xf-application-mocks/)](https://api.reuse.software/info/github.com/SAP-samples/xf-application-mocks/)
+
 Contains lightweight substitutes for SAP applications to ease the development and testing of extension and integration scenarios based on [Varkes](https://github.com/kyma-incubator/varkes). Together with SAP Cloud Platform Extension Factory, it allows for efficient implementation of application extensions without the need to access the real SAP applications during development.
 
 ## Description
@@ -46,4 +48,4 @@ If you find an issue or want to submit an idea, open a [Github Issue](https://gi
 
 ## License
 Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
-This file is licensed under the `SAP API DEFINITIONS LICENSE` except as noted otherwise in the [LICENSE](LICENSE) file.
+This file is licensed under the `SAP API DEFINITIONS LICENSE` except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.
