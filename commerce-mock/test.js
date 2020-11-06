@@ -68,6 +68,15 @@ describe('test app', function () {
                         .expect('Content-Type', 'application/json; charset=utf-8', done)
                 });
             });
+            describe('Get token with x-www-form-urlencoded', function() {
+                it('should return 200', function (done) {
+                    request(app)
+                    .post('/rest/v2/authorizationserver/oauth/token')
+                    .send('client_id=admin&client_secret=nimda&grant_type=client_credentials')
+                    .expect(200)
+                    .expect('Content-Type', 'application/json; charset=utf-8', done)
+                })
+            });
             done()
         }).catch(error => done(error));
     });
