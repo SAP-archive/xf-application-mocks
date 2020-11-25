@@ -2,23 +2,23 @@
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/xf-application-mocks/)](https://api.reuse.software/info/github.com/SAP-samples/xf-application-mocks/)
 
-Contains lightweight substitutes for SAP applications to ease the development and testing of extension and integration scenarios based on [Varkes](https://github.com/kyma-incubator/varkes). Together with SAP Cloud Platform Extension Factory, it allows for efficient implementation of application extensions without the need to access the real SAP applications during development.
+Contains lightweight substitutes for SAP applications to ease the development and testing of extension and integration scenarios based on [Varkes](https://github.com/kyma-incubator/varkes). Together with SAP Cloud Platform Kyma runtime, it allows for efficient implementation of application extensions without the need to access the real SAP applications during development.
 
 ## Description
 
-The SAP Cloud Platform Extension Factory is designed to easily extend and mash up different SAP applications and third-party APIs. To demo SAP Cloud Platform Extension Factory functionality, you can use a dummy application for integration rather than a full-blown application setup.
+The SAP Cloud Platform, Kyma runtime is designed to easily extend and mash up different SAP applications and third-party APIs. To demo SAP Cloud Platform, Kyma runtime functionality, you can use a dummy application for integration rather than a full-blown application setup.
 
 A smart and lightweight mock application allows you to save installation time, maintenance effort, and resources. Use its user-friendly interface to:
 
-- Successfully simulate requests or Events sent from an external system to SAP Cloud Platform Extension Factory, and returned responses.
-- Testing functionality in or on top of the SAP Cloud Platform Extension Factory without worrying about the dependencies.
+- Successfully simulate requests or Events sent from an external system to SAP Cloud Platform, Kyma runtime, and returned responses.
+- Testing functionality in or on top of the SAP Cloud Platform, Kyma runtime without worrying about the dependencies.
 
-The application mocks in this repository provide dummy implementations for most of the SAP Customer Experience applications. They are not bound to SAP Cloud Platform Extension Factory scenarios and can be operated standalone. All mocks are built with the API-driven approach in mind.
+The application mocks in this repository provide dummy implementations for most of the SAP Customer Experience applications. They are not bound to SAP Cloud Platform, Kyma runtime scenarios and can be operated standalone. All mocks are built with the API-driven approach in mind.
 
 ## Requirements
 
 The application mocks are NodeJS projects based on [Varkes](https://github.com/kyma-incubator/varkes) libraries and [Express](https://www.npmjs.com/package/express) web framework.
-To run them, you require a Docker-based container infrastructure, like pure Docker, Kubernetes or SAP Cloud Platform Extension Factory. 
+To run them, you require a Docker-based container infrastructure, like pure Docker, Kubernetes or SAP Cloud Platform, Kyma runtime. 
 
 ## Installation
 
@@ -37,15 +37,13 @@ kubectl create namespace mocks
 kubectl label namespace mocks env=true
 ```
 
-and to deploy the mock on SAP CP Extension Factory
+and to deploy the mock on SAP Cloud Platform, Kyma runtime
 
 ``` bash
 kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/commerce-mock/deployment/xf.yaml
 kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/marketing-mock/deployment/xf.yaml
 kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/c4c-mock/deployment/xf.yaml
 ```
-
-For an even more convinient installation on an existing Kyma cluster please consider to use the [XF-Addons](https://github.com/sap/xf-addons) which can be configured as Addon Repository by configuring: `github.com/sap/xf-addons//addons/index.yaml?ref=latest`
 
 ## Known issues
 
