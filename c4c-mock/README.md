@@ -1,7 +1,7 @@
 
 # Cloud for Customer Mock
 
-This application emulates SAP Cloud for Customer. It uses the **varkes-api-server** to connect to SAP Cloud Platform Extension Factory and register the bundled ODATA APIs which are also mocked using the  **varkes-odata-mock**. For the list of mocked APIs, see [`varkes_config.json`](varkes_config.json).
+This application emulates SAP Cloud for Customer. It uses the **varkes-api-server** to connect to a `SAP Cloud Platform, Kyma Runtime` and register the bundled ODATA APIs which are also mocked using the  **varkes-odata-mock**. For the list of mocked APIs, see [`varkes_config.json`](varkes_config.json).
 
 ## Run locally using Docker
 
@@ -14,15 +14,15 @@ docker run -p 10000:10000 eu.gcr.io/kyma-project/xf-application-mocks/c4c-mock:l
 ### Access the mock locally
 
 * For the mock UI, see `http://localhost:10000`
-* For the API used to to pair the mock with SAP Cloud Platform Extension Factory, see `http://localhost:10000/console`
+* For the API used to to pair the mock, see `http://localhost:10000/console`
 * For mocked APIs, see:
   * `http://localhost:10000/sap/c4c/odata/v1/c4codataapi/console`
   * `http://localhost:10000/sap/c4c/odata/v1/c4codataapi/`
 
-## Run mock using SAP CP Extension Factory
+## Run mock using `SAP Cloud Platform, Kyma Runtime`
 
-To run the mock using SAP CP Extension Factory as a runtime environment, perform the following steps:
- 
+To run the mock using `SAP Cloud Platform, Kyma Runtime`, perform the following steps:
+
 1. Set up a Namespace:
 
 ```bash
@@ -33,14 +33,14 @@ kubectl create namespace mocks
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/c4c-mock/deployment/k8s.yaml -n mocks
-kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/c4c-mock/deployment/xf.yaml -n mocks
+kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/c4c-mock/deployment/kyma.yaml -n mocks
 ```
 
 These commands expose the UI and API of the mock via an `API` resource and makes the UI accessible at: `https://c4c.{yourDomain}`
 
 ## Run mock on Kubernetes
 
-1. Set up the Namespace: 
+1. Set up the Namespace:
 
 ```bash
 kubectl create namespace mocks
