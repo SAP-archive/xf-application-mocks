@@ -1,4 +1,4 @@
-# XF-Application-Mocks
+# XF-Application-Mocks 
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/xf-application-mocks/)](https://api.reuse.software/info/github.com/SAP-samples/xf-application-mocks/)
 
