@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ actions ]
+    branches: [ main ]
   pull_request:
-    branches: [ actions ]
+    branches: [ main ]
   release:
     types: [published, created, edited, prereleased]
 env:
