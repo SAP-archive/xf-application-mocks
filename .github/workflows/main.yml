@@ -1,5 +1,5 @@
 
-name: build-main
+name: build-and-push-master
 
 # # Controls when the workflow will run
 on:
@@ -12,7 +12,7 @@ on:
     branches:
       - master
   release:
-    types: [published, created, edited, prereleased]
+    types: [published, created, released, prereleased]
   workflow_dispatch: {}
 env:
   REGISTRY: ghcr.io
