@@ -8,7 +8,10 @@ The marketing mock emulates SAP Marketing Cloud. It uses the **varkes-api-server
 To run the mock locally, run:
 
 ```bash
-docker run -p 10000:10000 eu.gcr.io/kyma-project/xf-application-mocks/marketing-mock:latest
+docker run -p 10000:10000 \
+  --restart=always \
+  --name marketing-mock \
+  ghcr.io/sap-samples/xf-application-mocks/marketing-mock:latest
 ```
 
 ### Access the Mock

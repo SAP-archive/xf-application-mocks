@@ -18,7 +18,7 @@ spec:
         app: commerce-mock
     spec:
       containers:
-      - image: eu.gcr.io/kyma-project/xf-application-mocks/commerce-mock:latest
+      - image: ghcr.io/sap-samples/xf-application-mocks/commerce-mock:latest
         imagePullPolicy: Always
         name: commerce-mock
         ports:

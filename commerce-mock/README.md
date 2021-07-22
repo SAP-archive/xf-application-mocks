@@ -11,7 +11,7 @@ docker run -d \
   -p 10000:10000 \
   --restart=always \
   --name commerce-mock \
-  eu.gcr.io/kyma-project/xf-application-mocks/commerce-mock:latest
+  ghcr.io/sap-samples/xf-application-mocks/commerce-mock:latest
 ```
 
 ### Access the mock locally

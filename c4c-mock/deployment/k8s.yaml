@@ -18,7 +18,7 @@ spec:
         app: c4c-mock
     spec:
       containers:
-      - image: eu.gcr.io/kyma-project/xf-application-mocks/c4c-mock:latest
+      - image: ghcr.io/sap-samples/xf-application-mocks/c4c-mock:latest
         imagePullPolicy: Always
         name: c4c-mock
         ports:

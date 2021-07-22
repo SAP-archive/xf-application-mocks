@@ -18,7 +18,7 @@ spec:
         app: marketing-mock
     spec:
       containers:
-      - image: eu.gcr.io/kyma-project/xf-application-mocks/marketing-mock:latest
+      - image: ghcr.io/sap-samples/xf-application-mocks/marketing-mock:latest
         imagePullPolicy: Always
         name: marketing-mock
         ports:

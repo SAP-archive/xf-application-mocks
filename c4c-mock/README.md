@@ -8,7 +8,10 @@ This application emulates SAP Cloud for Customer. It uses the **varkes-api-serve
 To run the mock locally, run:
 
 ```bash
-docker run -p 10000:10000 eu.gcr.io/kyma-project/xf-application-mocks/c4c-mock:latest
+docker run -p 10000:10000 \
+  --restart=always \
+  --name c4c-mock \
+  ghcr.io/sap-samples/xf-application-mocks/c4c-mock:latest
 ```
 
 ### Access the mock locally
