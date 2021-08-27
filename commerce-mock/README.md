@@ -2,6 +2,7 @@
 
 The commerce mock emulates SAP Commerce Cloud. It uses the **varkes-api-server** to connect to `SAP Cloud Platform, Kyma Runtime` and register the bundled commerce APIs, which are also mocked using the **varkes-openapi-mock**. For the list of mocked APIs, see [`varkes_config.json`](varkes_config.json).
 
+
 ## Run locally using Docker
 
 To run the mock locally, run:
