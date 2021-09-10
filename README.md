@@ -25,6 +25,7 @@ To run them, you require a Docker-based container infrastructure, like pure Dock
 Each application mock holds detailed installation instructions in a `README` file:
 
 - [SAP Commerce Cloud Mock](commerce-mock/README.md)
+- [SAP Commerce Cloud Mock (Lite edition)](commerce-mock-lite/README.md)
 - [SAP Marketing Cloud Mock](marketing-mock/README.md)
 - [SAP Cloud for Customer Mock](c4c-mock/README.md)
 
@@ -41,6 +42,7 @@ and to deploy the mock on `SAP Cloud Platform, Kyma Runtime`
 
 ``` bash
 kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/commerce-mock/deployment/kyma.yaml
+kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/commerce-mock-lite/deployment/kyma.yaml
 kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/marketing-mock/deployment/kyma.yaml
 kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/c4c-mock/deployment/kyma.yaml
 ```
