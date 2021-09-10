@@ -12,7 +12,7 @@ on:
     branches:
       - master
   release:
-    types: [published, created, released, prereleased]
+    types: [published]
   workflow_dispatch: {}
 env:
   REGISTRY: ghcr.io
