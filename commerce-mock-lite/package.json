@@ -1,20 +1,16 @@
 {
-  "name": "c4c-mock",
-  "description": "Mocked SAP Cloud for Customer",
+  "name": "commerce-mock-lite",
+  "description": "A mock of SAP Commerce Cloud (Light edition)",
   "version": "0.1.0",
   "main": "app.js",
-  "engines": {
-    "node": ">=4"
-  },
   "scripts": {
-    "start": "node . 10000",
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node . 10000"
   },
   "dependencies": {
     "@varkes/configuration": "0.11.2",
     "@varkes/api-server": "0.11.2",
-    "@varkes/cockpit": "0.11.2",
-    "@varkes/odata-mock": "0.11.2",
+    "@varkes/openapi-mock": "0.11.2",
     "express": "^4.17.1"
   },
   "devDependencies": {
@@ -24,7 +20,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/SAP/xf-application-mocks.git",
-    "directory": "c4c-mock"
+    "url": "https://github.com/SAP/xf-application-mocks",
+    "directory": "commerce-mock-lite"
   }
 }

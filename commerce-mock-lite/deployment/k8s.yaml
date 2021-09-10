@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: c4c-mock
+  name: commerce-mock-lite
   labels:
-    app: c4c-mock
+    app: commerce-mock-lite
 spec:
   selector:
     matchLabels:
-      app: c4c-mock
+      app: commerce-mock-lite
   strategy:
     rollingUpdate:
       maxUnavailable: 1
@@ -15,10 +15,10 @@ spec:
   template:
     metadata:
       labels:
-        app: c4c-mock
+        app: commerce-mock-lite
     spec:
       containers:
-      - image: ghcr.io/sap-samples/xf-application-mocks/c4c-mock:latest
+      - image: ghcr.io/sap-samples/xf-application-mocks/commerce-mock-lite:latest
         imagePullPolicy: Always
         name: mock
         ports:
@@ -42,27 +42,27 @@ spec:
       volumes:
       - name: mock-volume
         persistentVolumeClaim:
-          claimName: c4c-mock
+          claimName: commerce-mock-lite
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: c4c-mock
+  name: commerce-mock-lite
   labels:
-    app: c4c-mock
+    app: commerce-mock-lite
 spec:
   ports:
   - name: http
     port: 10000
   selector:
-    app: c4c-mock
+    app: commerce-mock-lite
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: c4c-mock
+  name: commerce-mock-lite
   labels:
-    app: c4c-mock
+    app: commerce-mock-lite
 spec:
   accessModes:
     - ReadWriteOnce

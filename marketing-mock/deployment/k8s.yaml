@@ -20,7 +20,7 @@ spec:
       containers:
       - image: ghcr.io/sap-samples/xf-application-mocks/marketing-mock:latest
         imagePullPolicy: Always
-        name: marketing-mock
+        name: mock
         ports:
         - name: http
           containerPort: 10000
@@ -31,7 +31,7 @@ spec:
           value: "00 00 */12 * * *"
         volumeMounts:
         - mountPath: "/app/keys"
-          name: marketing-mock-volume
+          name: mock-volume
         resources:
           requests:
             memory: "150Mi"
@@ -40,7 +40,7 @@ spec:
             memory: "250Mi"
             cpu: "100m"
       volumes:
-      - name: marketing-mock-volume
+      - name: mock-volume
         persistentVolumeClaim:
           claimName: marketing-mock
 ---

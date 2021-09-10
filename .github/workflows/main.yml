@@ -34,7 +34,7 @@ jobs:
 #     # Steps represent a sequence of tasks that will be executed as part of the job
     strategy:
       matrix:
-        app: [commerce-mock,marketing-mock,c4c-mock]
+        app: [commerce-mock,commerce-mock-lite,marketing-mock,c4c-mock]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
