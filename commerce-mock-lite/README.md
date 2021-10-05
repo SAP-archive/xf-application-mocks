@@ -1,6 +1,6 @@
 # Light Commerce Mock
 
-The light commerce mock emulates SAP Commerce Cloud on base of a reduced event and API catalog. It uses the **varkes-api-server** to connect to `SAP Cloud Platform, Kyma Runtime` and register the bundled commerce APIs, which are also mocked using the **varkes-openapi-mock**. For the list of mocked APIs, see [`varkes_config.json`](varkes_config.json).
+The light commerce mock emulates SAP Commerce Cloud on base of a reduced event and API catalog. It uses the **varkes-api-server** to connect to `SAP Business Technology Platform, Kyma Runtime` and register the bundled commerce APIs, which are also mocked using the **varkes-openapi-mock**. For the list of mocked APIs, see [`varkes_config.json`](varkes_config.json).
 
 ## Run locally using Docker
 
@@ -25,9 +25,9 @@ docker run -d \
   * `http://localhost:10000/couponwebservices/console`
   * `http://localhost:10000/warehousingwebservices/console`
 
-## Run mock using `SAP Cloud Platform, Kyma Runtime`
+## Run mock using `SAP Business Technology Platform, Kyma Runtime`
 
-To run the mock using `SAP Cloud Platform, Kyma Runtime` as a runtime environment, perform the following steps:
+To run the mock using `SAP Business Technology Platform, Kyma Runtime` as a runtime environment, perform the following steps:
 
 1. Set up the Namespace:
 

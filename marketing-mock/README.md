@@ -1,7 +1,7 @@
 
 # Marketing Mock
 
-The marketing mock emulates SAP Marketing Cloud. It uses the **varkes-api-server** to connect to `SAP Cloud Platform, Kyma Runtime` and register the bundled marketing APIs, which are also mocked using **varkes-odata-mock**. For the list of mocked APIs, see [`varkes_config.json`](varkes_config.json).
+The marketing mock emulates SAP Marketing Cloud. It uses the **varkes-api-server** to connect to `SAP Business Technology Platform, Kyma Runtime` and register the bundled marketing APIs, which are also mocked using **varkes-odata-mock**. For the list of mocked APIs, see [`varkes_config.json`](varkes_config.json).
 
 ## Run local using Docker
 
@@ -30,9 +30,9 @@ docker run -p 10000:10000 \
   * `http://localhost:10000/sap/opu/api/sap/API_MKT_INTERACTION_CONTACT_SRV/console`
   * `http://localhost:10000/sap/opu/odata/sap/API_MKT_INTERACTION_CONTACT_SRV/odata/`
 
-## Run mock on `SAP Cloud Platform, Kyma Runtime`
+## Run mock on `SAP Business Technology Platform, Kyma Runtime`
 
-To run the mock using `SAP Cloud Platform, Kyma Runtime` as a runtime environment, perform the following steps:
+To run the mock using `SAP Business Technology Platform, Kyma Runtime` as a runtime environment, perform the following steps:
 
 1. Set up the Namespace:
 

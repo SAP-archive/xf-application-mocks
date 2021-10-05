@@ -1,7 +1,7 @@
 
 # Cloud for Customer Mock
 
-This application emulates SAP Cloud for Customer. It uses the **varkes-api-server** to connect to a `SAP Cloud Platform, Kyma Runtime` and register the bundled ODATA APIs which are also mocked using the  **varkes-odata-mock**. For the list of mocked APIs, see [`varkes_config.json`](varkes_config.json).
+This application emulates SAP Cloud for Customer. It uses the **varkes-api-server** to connect to a `SAP Business Technology Platform, Kyma Runtime` and register the bundled ODATA APIs which are also mocked using the  **varkes-odata-mock**. For the list of mocked APIs, see [`varkes_config.json`](varkes_config.json).
 
 ## Run locally using Docker
 
@@ -22,9 +22,9 @@ docker run -p 10000:10000 \
   * `http://localhost:10000/sap/c4c/odata/v1/c4codataapi/console`
   * `http://localhost:10000/sap/c4c/odata/v1/c4codataapi/`
 
-## Run mock using `SAP Cloud Platform, Kyma Runtime`
+## Run mock using `SAP Business Technology Platform, Kyma Runtime`
 
-To run the mock using `SAP Cloud Platform, Kyma Runtime`, perform the following steps:
+To run the mock using `SAP Business Technology Platform, Kyma Runtime`, perform the following steps:
 
 1. Set up a Namespace:
 
