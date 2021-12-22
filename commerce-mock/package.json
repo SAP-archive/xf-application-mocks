@@ -9,11 +9,11 @@
   },
   "dependencies": {
     "@varkes/configuration": "0.13.0",
-    "@varkes/api-server": "0.13.0",
+    "@varkes/api-server": "0.13.1",
     "@varkes/cockpit": "0.13.0",
     "@varkes/openapi-mock": "0.13.0",
     "@varkes/odata-mock": "0.13.0",
-    "express": "^4.17.1"
+    "express": "^4.17.2"
   },
   "devDependencies": {
     "mocha": "^9.1.3",
