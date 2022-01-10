@@ -16,7 +16,6 @@ docker run -d \
 
 ### Access the mock locally
 
-* For mock UI, see `http://localhost:10000`
 * For the API to pair the mock, see `http://localhost:10000/console`
 * For mocked APIs, see:
   * `http://localhost:10000/rest/v2/console`
@@ -42,7 +41,7 @@ kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/mast
 kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/commerce-mock-lite/deployment/kyma.yaml -n mocks
 ```
 
-These commands expose the UI and API of the mock via an `APIRule` resource and makes the UI accessible at `https://commerce-lite.{yourDomain}`.
+These commands expose the API of the mock via an `APIRule` resource and makes it accessible at `https://commerce-lite.{yourDomain}`.
 
 ## Run mock on Kubernetes
 
