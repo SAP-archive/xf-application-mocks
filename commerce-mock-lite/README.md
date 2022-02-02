@@ -37,8 +37,8 @@ kubectl create namespace mocks
 2. Deploy the mock:
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/commerce-mock-lite/deployment/k8s.yaml -n mocks
-kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/commerce-mock-lite/deployment/kyma.yaml -n mocks
+kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/main/commerce-mock-lite/deployment/k8s.yaml -n mocks
+kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/main/commerce-mock-lite/deployment/kyma.yaml -n mocks
 ```
 
 These commands expose the API of the mock via an `APIRule` resource and makes it accessible at `https://commerce-lite.{yourDomain}`.
@@ -54,7 +54,7 @@ kubectl create namespace mocks
 2. Deploy the mock:
 
 ```bash
-kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/commerce-mock-lite/deployment/k8s.yaml -n mocks
+kubectl apply -f https://raw.githubusercontent.com/SAP/xf-application-mocks/main/commerce-mock-lite/deployment/k8s.yaml -n mocks
 ```
 
 This command deploys a `Service` of a ClusterIP type. You need to expose it manually using any Ingress type.

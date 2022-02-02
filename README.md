@@ -41,10 +41,10 @@ kubectl label namespace mocks env=true
 and to deploy the mock on `SAP Business Technology Platform, Kyma Runtime`
 
 ``` bash
-kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/commerce-mock/deployment/kyma.yaml
-kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/commerce-mock-lite/deployment/kyma.yaml
-kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/marketing-mock/deployment/kyma.yaml
-kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/master/c4c-mock/deployment/kyma.yaml
+kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/main/commerce-mock/deployment/kyma.yaml
+kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/main/commerce-mock-lite/deployment/kyma.yaml
+kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/main/marketing-mock/deployment/kyma.yaml
+kubectl apply -n mocks -f https://raw.githubusercontent.com/SAP/xf-application-mocks/main/c4c-mock/deployment/kyma.yaml
 ```
 
 ## Known issues
