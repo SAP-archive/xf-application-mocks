@@ -8,9 +8,9 @@
     "start": "node . 10000"
   },
   "dependencies": {
-    "@varkes/configuration": "0.13.4",
-    "@varkes/api-server": "0.13.4",
-    "@varkes/openapi-mock": "0.13.4",
+    "@varkes/configuration": "0.13.5",
+    "@varkes/api-server": "0.13.5",
+    "@varkes/openapi-mock": "0.13.5",
     "express": "^4.17.3"
   },
   "devDependencies": {
