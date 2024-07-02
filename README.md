@@ -1,6 +1,8 @@
 # XF-Application-Mocks
 
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/xf-application-mocks/)](https://api.reuse.software/info/github.com/SAP-samples/xf-application-mocks/)
+[![Not Maintained](https://img.shields.io/badge/Maintenance%20Level-Not%20Maintained-yellow.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
+
 
 Contains lightweight substitutes for SAP applications to ease the development and testing of extension and integration scenarios based on [Varkes](https://github.com/kyma-incubator/varkes). Together with `SAP Business Technology Platform, Kyma Runtime`, it allows for efficient implementation of application extensions without the need to access the real SAP applications during development.
 
